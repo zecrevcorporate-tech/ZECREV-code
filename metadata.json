@@ -1,0 +1,7 @@
+{
+  "name": "ZECREV CODEZ",
+  "description": "An AI-powered SaaS platform to generate, preview, and refine fully functional websites from text prompts. Features live previews for multiple devices, code download, and an AI chat for iterative improvements.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

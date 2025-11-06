@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZECREV CODEZ - AI Code Generation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0"
+  }
+}
+</script>
+<style>
+  /* Basic styling for code editor textarea */
+  .code-editor {
+    font-family: 'Courier New', Courier, monospace;
+    tab-size: 4;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    white-space: pre;
+    word-wrap: normal;
+    overflow-x: auto;
+  }
+  
+  /* Editor Theming */
+  :root {
+      --editor-dark-bg: #1f2937; /* gray-800 */
+      --editor-dark-text: #e5e7eb; /* gray-200 */
+
+      --editor-dracula-bg: #282a36;
+      --editor-dracula-text: #f8f8f2;
+
+      --editor-solarized-bg: #002b36;
+      --editor-solarized-text: #839496;
+
+      --editor-light-bg: #ffffff;
+      --editor-light-text: #111827; /* gray-900 */
+  }
+  
+  .themed-editor {
+    background-color: var(--editor-bg);
+    color: var(--editor-text);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  [data-editor-theme="dark"] {
+      --editor-bg: var(--editor-dark-bg);
+      --editor-text: var(--editor-dark-text);
+  }
+  [data-editor-theme="dracula"] {
+      --editor-bg: var(--editor-dracula-bg);
+      --editor-text: var(--editor-dracula-text);
+  }
+  [data-editor-theme="solarized"] {
+      --editor-bg: var(--editor-solarized-bg);
+      --editor-text: var(--editor-solarized-text);
+  }
+  [data-editor-theme="light"] {
+      --editor-bg: var(--editor-light-bg);
+      --editor-text: var(--editor-light-text);
+  }
+
+  /* Styling for the resizable splitter */
+  .splitter-y {
+      flex-shrink: 0;
+      cursor: col-resize;
+      width: 8px;
+      background-color: #f3f4f6; /* tailwind gray-100 */
+      transition: background-color 0.2s ease;
+  }
+  .splitter-y:hover {
+      background-color: #93c5fd; /* tailwind blue-300 */
+  }
+  
+  /* Drag-to-scroll cursors */
+  .cursor-grab {
+      cursor: grab;
+  }
+  .cursor-grabbing {
+      cursor: grabbing;
+  }
+</style>
+</head>
+  <body class="bg-gray-50 text-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
